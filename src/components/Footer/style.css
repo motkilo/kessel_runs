@@ -1,0 +1,19 @@
+.footer {
+  font-family: Times, "Times New Roman", serif;
+  text-align: center;
+  height: 2vw;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0; 
+  background-color: #1a1a1a;
+}
+
+.footer-text {
+  font-family: Times, "Times New Roman", serif;
+  font-size: 15px;
+  color: #fe4b03;
+  text-align: center;
+  padding-top: 15px;
+  
+}

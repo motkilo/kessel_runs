@@ -1,0 +1,28 @@
+#masthead {
+  margin-top: 15px;
+  padding: 10px;
+  height: 11vw;
+  background-image: linear-gradient(to right, #333333, #b3b3b3,#f2f2f2, #b3b3b3, #333333);
+  
+}
+
+.header-text {
+  font-family: Times, "Times New Roman", serif;
+  color: #fe4b03;
+  /* text-align: center; */
+  padding-top: 5px;
+  
+}
+
+#motkilo {
+  font-size:5vw;
+  letter-spacing: 35px;
+  /* text-shadow: -1px 0 #b3b3b3, 0 1px #b3b3b3, 1px 0 #b3b3b3, 0 -1px #b3b3b3; */
+}
+
+#tech-co-text {
+  font-size: 2vw;
+  letter-spacing: 13px;
+  word-spacing: 10px;
+  /* text-shadow: -1px 0 #b3b3b3, 0 1px #b3b3b3, 1px 0 #b3b3b3, 0 -1px #b3b3b3; */
+}
