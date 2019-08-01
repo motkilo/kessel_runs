@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import MapboxGl from "mapbox-gl/dist/mapbox-gl.js";
 import Jumbotron from "../components/Jumbotron";
-import { Link } from "react-router-dom";
 import Container from "../components/Container";
 import Col from "../components/Col";
 import Row from "../components/Row";
 import { Input, FormBtn } from "../components/Form";
+import KesselMap from "../components/KesselMap";
 
 class CreateRun extends Component {
 
@@ -17,22 +16,10 @@ class CreateRun extends Component {
     machine_name: "",
     machine_type: "",
     start_location: "",
-    end_location: "",
+    finish_location: "",
   };
 
-  componentDidMount() {
-
-    MapboxGl.accessToken = 'pk.eyJ1IjoiYWxscnlkZXIiLCJhIjoidWs5cUFfRSJ9.t8kxvO3nIhCaAl07-4lkNw';
-
-    new MapboxGl.Map({
-      container: this.container,
-      style: 'mapbox://styles/mapbox/light-v9',
-      center: [-74.50, 40], // starting position [lng, lat]
-      zoom: 9 // starting zoom
-    });
-  }
-
-
+  
   render() {
     return (
       <Container fluid>
@@ -40,26 +27,21 @@ class CreateRun extends Component {
           <Col size="md-12">
             <Jumbotron>
               <h1>Create Run Form</h1>
-            </Jumbotron>
+            </Jumbotron> 
           </Col>
         </Row>
         <Row>
           <Col size="md-8">
-            <div className='Map' ref={(x) => { this.container = x }}>
-              { MapboxGl.Map}
-            </div>
+            <KesselMap>
+              
+
+            </KesselMap>
             <form>
               <Input
                 value={this.state.title}
                 onChange={this.handleInputChange}
                 name="title"
                 placeholder="Name your Kessel Run (required)"
-              />
-              <Input
-                value={this.state.machine_name}
-                onChange={this.handleInputChange}
-                name="machine_name"
-                placeholder="Name your machine (required)"
               />
               <Input
                 value={this.state.start_location}
@@ -70,8 +52,8 @@ class CreateRun extends Component {
               <Input
                 value={this.state.end_location}
                 onChange={this.handleInputChange}
-                name="end_location"
-                placeholder="End Location (required)"
+                name="finish_location"
+                placeholder="Finish Location (required)"
               />
               <FormBtn
                 disabled={!(

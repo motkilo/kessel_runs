@@ -1,18 +1,22 @@
-import React from "react";
-// import Map from "../components/Map";
-// import Row from "../components/Row";
-// import Col from "../components/Col";
-import KesselCard from "../components/KesselCard";
-import Map from "../components/Map";
+import React, { Component } from 'react';
+import Masthead from "../components/Masthead";
+import Container from "../components/Container";
+import Row from "../components/Row";
+import Col from "../components/Col";
+import KesselMap from "../components/KesselMap";
 
-function Kessels() {
-  return (
-    <div>
-      <Map />
-      <Map />
-      
-     </div> 
-  );
+export default class Kessels extends Component {
+  render() {
+    return (
+      <div>
+        <Masthead />
+        
+        <KesselMap />
+          
+      </div>
+    );
+  }
 }
 
-export default Kessels;
+
+

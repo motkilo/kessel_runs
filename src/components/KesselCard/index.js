@@ -1,5 +1,5 @@
 import React from "react";
-import Map from "../Map";
+import KesselMap from "../KesselMap";
 import Col from "../Col";
 import Row from "../Row";
 import "./style.css";
